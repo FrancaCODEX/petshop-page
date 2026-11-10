@@ -47,6 +47,41 @@ export function Icon({
       </>
     ),
     heart: <path d="M12 20 4 12C-3 4 7-1 12 6c5-7 15-2 8 6Z" />,
+    paw: (
+      <>
+        <path d="M12 12c-3 0-6 3-6 5.5C6 19.5 7.5 20 9 20c1.2 0 2-.5 3-.5s1.8.5 3 .5c1.5 0 3-.5 3-2.5C18 15 15 12 12 12Z" />
+        <circle cx="5" cy="10" r="1.8" />
+        <circle cx="9" cy="6" r="1.8" />
+        <circle cx="15" cy="6" r="1.8" />
+        <circle cx="19" cy="10" r="1.8" />
+      </>
+    ),
+    clock: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </>
+    ),
+    cross: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <path d="M12 8v8M8 12h8" />
+      </>
+    ),
+    truck: (
+      <>
+        <path d="M2 6h11v10H2ZM13 9h5l4 4v3h-9Z" />
+        <circle cx="6.5" cy="18" r="2" />
+        <circle cx="17.5" cy="18" r="2" />
+      </>
+    ),
+    instagram: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <path d="M17.5 6.5h.01" />
+      </>
+    ),
     sun: (
       <>
         <circle cx="12" cy="12" r="4" />

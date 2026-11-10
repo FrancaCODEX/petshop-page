@@ -16,6 +16,19 @@ PR: https://github.com/FrancaCODEX/petshop-page/pull/1
 
 Somente o preview `demo` está publicado. O Worker pai não possui implantação de produção e seu endereço workers.dev está desativado.
 
+## Rota /pet-family — demonstração para a Pet’s Family
+
+Página independente em `/pet-family`, no mesmo projeto e no mesmo deploy da demonstração genérica (`/`), que não foi alterada.
+
+- Conteúdo: `config/pet-family.ts`. Dados vindos do perfil `@familypet1`, ainda não confirmados pela equipe.
+- Página e estilos: `app/pet-family/page.tsx` e `app/pet-family/pet-family.css` (tudo dentro de `.pf`, sem afetar `/`).
+- Sem número de WhatsApp confirmado, o botão de WhatsApp fica desativado e sem link; o contato funcional é o Instagram.
+- O atendimento 24 horas aparece atribuído ao perfil e marcado "a confirmar" até `clinic.open24h.confirmed` virar `true`.
+- Fotos: as mesmas imagens ilustrativas de `public/images/`, identificadas como ilustrativas.
+- `demo: true` mantém a faixa de demonstração e os avisos. Não é o site oficial da Pet’s Family.
+
+A confirmar com a equipe: WhatsApp e telefone, endereço, atendimento 24 horas, condições da entrega (regiões, taxas, horários), texto do "Sobre" e fotos autorizadas.
+
 ## Rodar localmente
 
 Requer Node.js 24.22+ e npm.
