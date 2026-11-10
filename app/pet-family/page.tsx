@@ -137,6 +137,12 @@ export default function PetFamilyPage() {
 
           <figure className="pf-hero-photo">
             <img src={pf.images.hero.src} alt={pf.images.hero.alt} width="1000" height="1250" />
+            <span className="pf-sticker" aria-hidden="true">
+              <Icon name="heart" />
+              com muito
+              <br />
+              carinho
+            </span>
             {pf.images.hero.illustrative && <figcaption>Imagem ilustrativa</figcaption>}
           </figure>
         </section>
