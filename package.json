@@ -1,0 +1,38 @@
+{
+  "name": "petshop-page",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm",
+  "dependencies": {
+    "@vinext/cloudflare": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-server-dom-webpack": "latest",
+    "vinext": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "beta",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "latest",
+    "cf": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vite": "^8.3.7"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "preview:build": "node scripts/preview-build.mjs",
+    "preview:deploy": "npm run preview:build && cf previews deploy demo --prebuilt"
+  },
+  "overrides": {
+    "fflate": "^0.8.2"
+  }
+}
