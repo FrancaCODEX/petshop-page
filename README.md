@@ -8,6 +8,14 @@ TypeScript, React, App Router com APIs Next.js, Tailwind CSS 4 e Vinext, executa
 
 Creme, verde profundo, coral e amarelo, títulos serifados expressivos, fotografias locais WebP e detalhes gráficos discretos. Sem fontes externas ou biblioteca de componentes. O único componente interativo é o cabeçalho móvel.
 
+## Preview publicado
+
+https://demo-petshop-demo-preview.vfranca-dev.workers.dev
+
+PR: https://github.com/FrancaCODEX/petshop-page/pull/1
+
+Somente o preview `demo` está publicado. O Worker pai não possui implantação de produção e seu endereço workers.dev está desativado.
+
 ## Rodar localmente
 
 Requer Node.js 24.22+ e npm.
