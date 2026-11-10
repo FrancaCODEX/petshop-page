@@ -69,3 +69,11 @@ O login é local e nunca deve ser versionado. O primeiro preview pode criar o Wo
 ## Dados pendentes de aprovação
 
 Nome e identidade definitiva; texto institucional; serviços reais e suas descrições; categorias efetivamente oferecidas; endereço; horários; telefone/WhatsApp; redes sociais; fotos autorizadas da loja e serviços. Avaliações são opcionais e só devem ser adicionadas com autorização e fonte verificável.
+
+## Duas demonstrações da Pet’s Family
+
+- Original clara: https://demo-petshop-demo-preview.vfranca-dev.workers.dev/pet-family
+- Alternativa escura e dourada: https://demo-petshop-demo-preview.vfranca-dev.workers.dev/pet-family-dark
+- Demonstração genérica preservada em `/`.
+
+A versão clara foi restaurada integralmente de `claude/pet-family-demo`, commit `1970dc0`, incluindo página, estilos e configuração. Personalize em `config/pet-family.ts`. A alternativa escura usa `config/pet-family-dark.ts` e estilos isolados com prefixo `pfd-`. Ambas continuam demonstrações independentes e mantêm contatos ausentes e atendimento 24h como dados pendentes de confirmação.
