@@ -1,0 +1,8 @@
+node_modules/
+dist/
+originals/
+.taste-skill/
+.impeccable/cache/
+*.tsbuildinfo
+screenshots/*-initial.png
+screenshots/*.png

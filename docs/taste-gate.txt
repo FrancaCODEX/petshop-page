@@ -1,0 +1,398 @@
+gate: checking http://localhost:5173/ (place); this takes a few minutes on a CPU Chrome
+gate: 131 FAIL open
+  FAIL hero-fill        main#conteudo > section.benefits "Carinho de verdade"  [1440, 390]
+       the next section shows on the first screen: it starts at 705px on a 900px screen (the hero ends at 705px)
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL flush            section#inicio > div.container.hero-inner > div.hero-art > img "img: Golden retriever de b  [1440]
+       its last line sits 0px above the lower edge of section#inicio, where the ground changes to section.benefits
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  FAIL flush            div.container > div.club-band > div.club-art > img "img: Cão com óculos escuros e coroa am  [1440]
+       its last line sits 0px above the lower edge of section#clube, where the ground changes to section.section.stories-section
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  FAIL nav              div#root > header.site-header > div.container.header-inner > a.brand "PetAmigo PET SHOP"  [1440, 390]
+       nav link wraps to a second line
+       fix: make the nav one bar from the content's left edge to its right edge, with every link and action inside it
+  FAIL spill            section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.yellow-blob  [1440]
+       runs 181px past the bottom edge of the panel it sits on (section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.mint-blob)
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL spill            section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.coral-blob  [1440, 390]
+       runs 54px past the bottom edge of the panel it sits on (section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.yellow-blob)
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL spill            section#inicio > div.container.hero-inner > div.hero-art > img "img: Golden retriever de b  [1440]
+       lies across the edge of the card div.hero-art > div.hero-blob.yellow-blob: 293x556px on it, 54px past its bottom, 467px past its left
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL spill            section#inicio > div.container.hero-inner > div.hero-art > div.pet-note "Cuidar é o nosso   [1440]
+       runs 40px past the right edge of the panel it sits on (section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.mint-blob)
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL spill            div.container > div.club-band > div.club-art > img "img: Cão com óculos escuros e coroa am  [1440, 390]
+       lies across the edge of the card div.club-art > div.club-sun: 230x230px on it, 93px past its top, 100px past its right
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL spill            section#adocao > div.container.adoption-layout > div.adoption-photo > div.adoption-sticker  [1440, 390]
+       runs 21px past the left edge of the panel it sits on (section#adocao > div.container.adoption-layout > div.adoption-photo > img)
+       fix: keep the box inside the panel it starts on: shrink it, or grow the panel to hold it
+  FAIL card-visual      section#inicio > div.container.hero-inner > div.hero-art "Cuidar é o nosso jeito de amar."  [1440, 390]
+       3 cards hold only text: no picture, icon, UI fragment or effect in any of them
+       fix: give the cards a visual: an inset panel with a UI fragment, a photograph or real icons
+  FAIL card-layout      section#loja > div.container > div.products-grid "Alimentação Ração Premium Cães adultos ·  [1440, 390]
+       4 of 4 cards drawn one way (one panel, ground, placement and fragment): copies of one card
+       fix: a card layout at most twice on a page: build the other sections another way
+  FAIL button-styles    (the page)  [1440, 390]
+       3 button styles on the page: pill, fill #bc402e x4 ("Agendar serviço"); pill, fill #fffaf2 x1 ("Comprar na loja"); pill, fill #ffcf67 x1 ("Conhecer o clube")
+       fix: one primary and one secondary button: one shape, one height per size, one label size
+  FAIL copy-headline    h1#hero-title "Cuidado completo para o seu melhor amigo"  [1440]
+       "Cuidado completo para o seu melhor amigo!" does not name what is sold (pet shop, pet, shop, from flags)
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL copy-fact        h1#hero-title "Cuidado completo para o seu melhor amigo"  [1440]
+       the first screen holds no number, price, date, place, platform or genre
+       fix: put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim
+  FAIL copy-headings    div.container.benefits-grid > div.benefit:nth-of-type(2) > div > h2 "Saúde e bem-estar"  [1440]
+       "Saúde e bem-estar" names no product, part, place or section (6 headings like it; at most one brand line per page) (and 5 more like it: "Mais praticidade", "Quem ama, recomenda.", "Um novo lar. Uma vida de", "Conheça a L
+       fix: name the thing in every heading: the product, a part, the place or a section noun
+  FAIL heading-scale    div.services-grid > button.service-card.tone-mint > div.service-copy > h3 "Banho e tosa"  [1440, 390]
+       an h3 at 23px, as large as the smallest h2 (16px) or larger (and 2 more like it: "Veterinário", "Farmácia pet")
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL heading-scale    h2#club-title "Clube PetAmigo"  [1440]
+       h2 headings in 4 sizes, 16px ("Carinho de verdade") to 45px (x2.81)
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL heading-scale    section#adocao > div.container.adoption-layout > div.adoption-copy > h3 "Conheça a Luna ♀"  [1440, 390]
+       h3 headings in 2 sizes, 20px ("Alimentação ideal para c") to 27px (x1.35)
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL off-grid         section#adocao > div.container.adoption-layout > div.adoption-photo > img "img: Luna, gata  [1440]
+       left edge at 138px, 18px off the page margin at 120px (27 elements, like h2#blog-title)
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL tilt             section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.mint-blob  [1440, 390]
+       rotated -15.0° (and 2 more like it: svg.lucide.lucide-heart, "Uma amiga para a vida.")
+       fix: set it straight
+  FAIL tilt             section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.yellow-blob  [1440]
+       rotated 26.0° (and 2 more like it: "Cuidar é o nosso jeito d", svg.lucide.lucide-heart)
+       fix: set it straight
+  FAIL section-gaps     section#inicio / main#conteudo > section.benefits  [1440]
+       29px between these sections, -65% against the median 84px
+       fix: use one gap between sections (all within 25% of each other)
+  FAIL section-tile     section#servicos "Tudo para uma vida mais feliz."  [1440]
+       the section is 732px tall (0.81 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 732px of it and 168px of the next section, its heading "Favoritos para o seu favorito." on screen
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL section-tile     main#conteudo > section.section.stories-section "Um banho de carinho."  [1440]
+       the section is 775px tall (0.86 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 775px of it and 125px of the next section, its heading "Um novo lar. Uma vida de amor." on screen
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL field-label      div.container.stories-grid > div.transformation:nth-of-type(1) > div.compare:nth-of-type(2  [1440]
+       a input[type=range] without a label you can see: only an aria-label names it
+       fix: put a <label for> with the field's name above it (references/system.md, Forms); a placeholder is no label
+  FAIL focus-ring       .modal-heading h2:focus  [1440]
+       ".modal-heading h2:focus" in the page removes the focus outline and sets nothing in its place
+       fix: keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it
+  FAIL focus-ring       .form-summary:focus  [1440]
+       ".form-summary:focus" in the page removes the focus outline and sets nothing in its place
+       fix: keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it
+  FAIL focus-visible    div.container.hero-inner > div.hero-copy:nth-of-type(1) > div.hero-actions:nth-of-type(1)   [1440]
+       Tab stop 11, button "Agendar serviço": its focus change is faint: 1.48:1 against the ground, 3:1 needed
+       fix: keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus
+  FAIL focus-visible    div.container.hero-inner > div.hero-copy:nth-of-type(1) > div.hero-actions:nth-of-type(1)   [1440]
+       Tab stop 12, a "Comprar na loja": its focus change is faint: 1.48:1 against the ground, 3:1 needed
+       fix: keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus
+  FAIL focus-visible    section#inicio > a.hero-bottom-link "Conheça a PetAmigo"  [1440]
+       Tab stop 13, a "Conheça a PetAmigo": its focus change is faint: 1.48:1 against the ground, 3:1 needed
+       fix: keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus
+  FAIL focus-visible    section#servicos > div.container > div.services-grid:nth-of-type(2) > button.service-card.  [1440]
+       Tab stop 14, button "Banho e tosa Higiene, carinho e um cheirinho de fe": the focus lands on something you cannot see
+       fix: keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus
+  FAIL hero-enter       section#inicio  [1440]
+       the hero does not enter on load: no data-enter on the hero and no head line setting html.m-enter (motion.md, The hero's entrance)
+       fix: put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter
+  FAIL moment-none      (the page)  [1440]
+       a place page (--type) deals no moment: every kind carries one, two on a long page (moments.md)
+       fix: deal one (moments.mjs pick --page place --photo) and mount it in its own section
+  FAIL hero-screen      section#inicio "Cuidado completopara o seumelhor amigo!S"  [1440]
+       the hero ends at 705px on a 900px screen, 195px above the fold: it ends at the fold, 1px either way (SR-1)
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen      main#conteudo > section.benefits "Carinho de verdadeCuidado em cada detalh"  [1440]
+       195px of the next section shows on the first screen (from 705px on a 900px screen): nothing below the hero shows at load (SR-1)
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height   main#conteudo > section.benefits "Carinho de verdadeCuidado em cada detalh"  [1440]
+       the section is 107px tall (0.1 screens), 793px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height   div#root > footer.footer "PetAmigoPET SHOPServiços, saúde e bem-es"  [1440]
+       the section is 296px tall (0.3 screens), 604px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height (screen-short, screen-height) section#clube "ClubePetAmigoSeu melhor amigo mereceum c"  [1440, 390]
+       the section is 412px tall (0.5 screens), 488px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "Uma amigapara a vida.Um ", "Seu pet é de casapor aqu", "
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height (screen-short, screen-height) section#contato "Seu pet é de casapor aqui.Estamos espera"  [1440]
+       the section starts at 4989px, 411px above the screen grid (6 x 900px): sections start on whole screens (SR-2)
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height (screen-short, screen-height) section#blog "Cuidar também é aprender.Dicas para uma "  [1440]
+       the section starts at 4196px, 304px above the screen grid (5 x 900px): sections start on whole screens (and 8 more like it: "ClubePetAmigoSeu melhor ", "Favoritos para o seu fav", "PetAmigoPET SHOPServiços") (SR-2)
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section (neighbour) section#blog "Cuidar também é aprender.Dicas para uma "  [1440]
+       the screen at scroll 4500px (stride 5) shows 394px of section 8 and the content of 2 sections, over 24px each beside section 9: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section      h2#club-title "ClubePetAmigo"  [1440]
+       the screen at scroll 2404px (the top of section 5) shows 317px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 6: a screen shows one section (another may peek
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section      h2#blog-title "Cuidar também é aprender."  [1440]
+       the screen at scroll 3600px (stride 4) shows 304px of section 8 and the heading of section 8 whole and the content of 2 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WA
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section (neighbour) section#clube > div.container > div.club-band "ClubePetAmigoSeu melhor amigo mereceum c"  [1440, 390]
+       a band: a box 83% of the section wide on a ground of its own that holds the heading or the intro: the section's own ground is the band (SR-4)
+       fix: put every block of <main> in a <section>, and give a band its own section instead of a ground inside one
+  FAIL one-heading      div.container.benefits-grid > div.benefit:nth-of-type(2) > div > h2 "Saúde e bem-estar"  [1440]
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading      section.section.stories-section > div.container.stories-grid > div.testimonial > h2 "Quem   [1440]
+       the section holds 2 h2 headings: one per section, first in its .wrap (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading      div.footer-main > nav > div:nth-of-type(2) > h2 "Vamos conversar?"  [1440]
+       the section holds 2 h2 headings: one per section, first in its .wrap (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading      h2#services-title "Tudo para uma vida mais feliz."  [1440]
+       headings of two sections show whole on one screen at 27 of 101 scroll positions (26.7%; at scroll 50, 100, 150, 200px), here with "Carinho de verdade": at most 3% on a desktop (SR-5)
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges  section#inicio "Cuidado completopara o seumelhor amigo!S"  [1440]
+       the content of section 1 runs 120px from the left and 67px from the right (read from its outermost blocks: no .wrap): 120 and 67px are not one margin (one container, equal margins, 2px either way) (SR-6)
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges  div#root > footer.footer "PetAmigoPET SHOPServiços, saúde e bem-es"  [1440]
+       the content of section 10 runs 120px from the left and 90px from the right (read from its outermost blocks: no .wrap): 120 and 90px are not one margin (one container, equal margins, 2px either way) (and 1 more like it: "
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges  div#root "Pular para o conteúdoPetAmigoPET SHOPSer"  [1440]
+       a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges  section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.yellow-blob  [1440]
+       a box runs 1080-1440px, outside the container lines of section 1 at 120-1373px: full width is for background layers and grounds only (SR-6)
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges  section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.coral-blob  [1440]
+       a box runs 1240-1440px, outside the container lines of section 1 at 120-1373px: full width is for background layers and grounds only (SR-6)
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges  div.container.benefits-grid > div.benefit:nth-of-type(4) > div > h2 "Do jeito do seu pet"  [1440]
+       the h2 starts 968px right of the container's left: every h1 and h2 starts on it, 2px either way (and 11 more like it: "Mais praticidade", "Quem ama, recomenda.", x 777) (SR-6)
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges  div#root > footer.footer > div.container > div.footer-bottom "© 2026 PetAmigo. Feito com c  [1440]
+       a box over half the container wide runs 120-1320px, not on the container's lines at 120-1350px (SR-6)
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL row-lines        div#root > footer.footer > div.container > div.footer-bottom "© 2026 PetAmigo. Feito com c  [1440]
+       a row of 2 items: its last item ends at 1320px, the container's right line at 1350px (2px either way) (SR-7)
+       fix: start the row's first item on the container's left line and end its last on the right line, every item one height
+  FAIL split-pair       section#inicio > div.container.hero-inner "Cuidado completopara o seumelhor amigo!S"  [1440]
+       the two columns of the split start 74px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)
+       fix: top-align both columns of the split (align-items: start)
+  FAIL split-pair       section#adocao > div.container.adoption-layout "Uma amigapara a vida.Um novo lar.Uma vid"  [1440]
+       the two columns of the split start 23px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)
+       fix: top-align both columns of the split (align-items: start)
+  FAIL split-pair       section#contato > div.container.contact-grid "Seu pet é de casapor aqui.Estamos espera"  [1440]
+       the two columns of the split start 22px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)
+       fix: top-align both columns of the split (align-items: start)
+  FAIL flush            section#clube > div.container > div.club-band "Clube PetAmigo Seu melhor amigo merece u"  [390]
+       its last line sits 0px above the lower edge of section#clube, where the ground changes to section.section.stories-section
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  FAIL no-visual        section#loja "Favoritos para o seu favorito."  [390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL heading-scale    h2#adoption-title "Um novo lar. Uma vida de amor."  [390]
+       h2 headings in 4 sizes, 12px ("Carinho de verdade") to 36px (x3.00)
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL off-grid         section#clube > div.container > div.club-band "Clube PetAmigo Seu melhor amigo merece u"  [390]
+       left edge at 14px, 6px off the page margin at 20px (47 elements, like h2)
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL right-edge       section#inicio > div.container.hero-inner > div.hero-art > div.hero-blob.yellow-blob  [390]
+       its right edge runs 20px past the content's right edge (370px, where 15 boxes end) (and 3 more like it: "Cuidar é o nosso jeito d", "Clube PetAmigo Seu melho", "img: Cão e gato juntinho")
+       fix: end it on the content's right edge, like the other blocks of its section
+  FAIL edge-left        #inicio div.hero-art "Cuidar é o nossojeito de amar."  [1440]
+       starts at x 686; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits h2 "Carinho de verdade"  [1440, 390]
+       starts at x 164; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits p "Cuidado em cada detalhe."  [1440, 390]
+       starts at x 164; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits div.benefit "Saúde e bem-estarAtenção para ca"  [1440, 390]
+       starts at x 420; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits h2 "Saúde e bem-estar"  [1440, 390]
+       starts at x 488; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits p "Atenção para cada fase."  [1440, 390]
+       starts at x 488; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits div.benefit "Mais praticidadeServiços em um s"  [1440, 390]
+       starts at x 720; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits h2 "Mais praticidade"  [1440, 390]
+       starts at x 788; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits p "Serviços em um só lugar."  [1440, 390]
+       starts at x 788; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits div.benefit "Do jeito do seu petCada amigo é "  [1440, 390]
+       starts at x 1020; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits h2 "Do jeito do seu pet"  [1440, 390]
+       starts at x 1088; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.benefits p "Cada amigo é único."  [1440, 390]
+       starts at x 1088; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja h3 "Ração Premium"  [1440, 390]
+       starts at x 145; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja p "Cães adultos · 10 kg"  [1440, 390]
+       starts at x 145; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja h3 "Corda dental"  [1440, 390]
+       starts at x 450; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja p "Brinquedo para cães"  [1440, 390]
+       starts at x 450; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja h3 "Caminha Confort"  [1440, 390]
+       starts at x 755; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja p "Tamanho M"  [1440, 390]
+       starts at x 755; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja h3 "Shampoo Natural"  [1440, 390]
+       starts at x 1060; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja p "Pelos sensíveis"  [1440, 390]
+       starts at x 1060; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #clube h2 "ClubePetAmigo"  [1440, 390]
+       starts at x 507.4; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #clube p "Seu melhor amigo mereceum cuidad"  [1440, 390]
+       starts at x 507.4; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #clube ul.club-perks "Descontos na lojaPrioridade no a"  [1440]
+       starts at x 876.9; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-right       section.section.stories-section div.transformation "Um banho de carinho.Arraste e ve"  [1440]
+       ends at x 693; the right line is 1320
+       fix: end it on the .wrap right line
+  FAIL edge-left        section.section.stories-section div.testimonial "Quem ama, recomenda.“Atendimento"  [1440]
+       starts at x 747; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao div.adoption-photo "Uma amigapara a vida."  [1440]
+       starts at x 138; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-right       #adocao div.adoption-photo "Uma amigapara a vida."  [1440]
+       ends at x 680; the right line is 1320
+       fix: end it on the .wrap right line
+  FAIL edge-left        #adocao div.adoption-copy "Um novo lar.Uma vida de amor.Ado"  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao h2 "Um novo lar.Uma vida de amor."  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao p.adoption-intro "Adoção da semana"  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao h3 "Conheça a Luna ♀"  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao p "Dócil, carinhosa e pronta para u"  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #adocao p.adoption-footnote "Adotar é um compromisso para a v"  [1440]
+       starts at x 760; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #blog h3 "Como manter a higiene do seu pet"  [1440]
+       starts at x 149; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #blog h3 "Alimentação ideal para cada fase"  [1440, 390]
+       starts at x 888.1; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #blog h3 "Sinais de que seu pet precisa de"  [1440, 390]
+       starts at x 888.1; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #blog h3 "Como preparar seu pet para viage"  [1440, 390]
+       starts at x 888.1; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #contato div.contact-photo "Um lugar de cuidado.Um mundo de "  [1440]
+       starts at x 713.7; the lines are 120 and the column starts
+       fix: start it on the .wrap left line
+  FAIL lines            page  [1440, 390]
+       headings and leads start on 7 lines (x 120, 164, 488, 788, 1088, 507.4, 760); the page has 120 and one split line
+       fix: put the block on the .wrap lines or the grid columns
+  FAIL screen-short     #inicio section.hero "Cuidado completopara o seumelhor"  [1440, 390]
+       610px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour        #inicio section.hero "Cuidado completopara o seumelhor"  [1440, 390]
+       framed, 28px of section.benefits section.benefits "Carinho de verdadeCuidado em cad" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL neighbour-ground #inicio section.hero "Cuidado completopara o seumelhor"  [1440]
+       framed, 88px of #servicos section.section.services-section "Tudo para uma vida mais feliz.Da"'s ground shows
+       fix: end the ground with the section
+  FAIL screen-short     section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440, 390]
+       107px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440, 390]
+       107px, 0.12 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL sparse           section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440]
+       its content fills 43% of its screen; merge it or give it its visual (0.55 is the aim)
+       fix: fill the section or make it a screen shorter
+  FAIL neighbour        section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440, 390]
+       framed, 183px of #servicos section.section.services-section "Tudo para uma vida mais feliz.Da" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL neighbour-ground section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440]
+       framed, 61px of #loja section.section.shop-section "Favoritos para o seu favorito.Um"'s ground shows
+       fix: end the ground with the section
+  FAIL screen-short (screen-height) #servicos section.section.services-section "Tudo para uma vida mais feliz.Da"  [1440]
+       732px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour        #servicos section.section.services-section "Tudo para uma vida mais feliz.Da"  [1440]
+       framed, 48px of #loja section.section.shop-section "Favoritos para o seu favorito.Um" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-short (screen-height) #loja section.section.shop-section "Favoritos para o seu favorito.Um"  [1440]
+       860px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour-ground #loja section.section.shop-section "Favoritos para o seu favorito.Um"  [1440]
+       framed, 40px of #clube section.club-section "ClubePetAmigoSeu melhor amigo me"'s ground shows
+       fix: end the ground with the section
+  FAIL screen-short     section.section.stories-section section.section.stories-section "Um banho de carinho.Arras  [1440]
+       775px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.section.stories-section section.section.stories-section "Um banho de carinho.Arras  [1440]
+       775px, 0.86 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL neighbour        section.section.stories-section section.section.stories-section "Um banho de carinho.Arras  [1440]
+       framed, 55px of #adocao section.adoption-section "Uma amigapara a vida.Um novo lar" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-short (screen-height) #adocao section.adoption-section "Uma amigapara a vida.Um novo lar"  [1440]
+       605px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour        #adocao section.adoption-section "Uma amigapara a vida.Um novo lar"  [1440]
+       framed, 80px of #blog section.section.blog-section "Cuidar também é aprender.Dicas p" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL neighbour        #contato section.contact-section "Seu pet é de casapor aqui.Estamo"  [1440]
+       framed, 250px of the footer shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL hero-fold        #inicio section.hero "Cuidado completopara o seumelhor"  [1440, 390]
+       starts at y 95, not under the nav
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL hero-fold        section.benefits section.benefits "Carinho de verdadeCuidado em cad"  [1440, 390]
+       shows on the first screen from y 735
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL edge-left        section.benefits div.benefit "Carinho de verdadeCuidado em cad"  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #servicos p "Da rotina de cuidados aos moment"  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #loja p "Uma seleção de cuidados, diversã"  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.stories-section p "Arraste e veja a transformação."  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #blog p "Dicas para uma rotina com mais b"  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        #contato p.contact-note "Endereço, horários e contatos il"  [390]
+       starts at x 20; the lines are 0 and the column starts
+       fix: start it on the .wrap left line
+  FAIL neighbour        #loja section.section.shop-section "Favoritos para o seu favorito.Um"  [390]
+       framed, 252px of #clube section.club-section "ClubePetAmigoSeu melhor amigo me" shows
+       fix: keep the next section's heading and picture out of this screen
+  50 WARN (not blocking), first: flush div.container.benefits-grid > div.benefi; no-visual section#servicos "Tudo para uma vida mai; no-visual section#loja "Favoritos para o seu favor; no-visual section#clube "Clube PetAmigo"; no-visual section#blog "Cuidar também é aprender."
+A FAIL you judge false: add {"check": "<id>", "target": "<its where, enough to name that one finding>", "reason": "<why, 12+ characters>"} to .taste-skill/waivers.json (one finding each, 5 at most, never for kit-edited or checker-gaming); it goes in your report. Never edit the kit's files or hide the page from the checker.
+GATE: FAIL 131 (round 1 of 3)

@@ -1,0 +1,219 @@
+{
+  "baseURL": "http://localhost:4173",
+  "engine": "Chromium",
+  "tests": 38,
+  "passed": 38,
+  "failed": 0,
+  "results": [
+    {
+      "name": "390: página, fontes, assets e overflow",
+      "status": "pass",
+      "details": {
+        "fonts": "Nunito local",
+        "images": 24,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "name": "390: navegação e menu",
+      "status": "pass"
+    },
+    {
+      "name": "390: agendamento inválido e válido",
+      "status": "pass"
+    },
+    {
+      "name": "390: produtos, filtros, sacola e limites",
+      "status": "pass"
+    },
+    {
+      "name": "390: Luna e formulário de interesse",
+      "status": "pass"
+    },
+    {
+      "name": "390: clube, quatro artigos, mapa e contato",
+      "status": "pass"
+    },
+    {
+      "name": "390: teclado, modal e restauração de foco",
+      "status": "pass"
+    },
+    {
+      "name": "390: auditoria axe da página e formulários",
+      "status": "pass",
+      "details": {
+        "violations": 0
+      }
+    },
+    {
+      "name": "390: console, rede e ausência de envio real",
+      "status": "pass",
+      "details": {
+        "consoleErrors": 0,
+        "failedRequests": 0,
+        "submissions": 0
+      }
+    },
+    {
+      "name": "768: página, fontes, assets e overflow",
+      "status": "pass",
+      "details": {
+        "fonts": "Nunito local",
+        "images": 24,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "name": "768: navegação e menu",
+      "status": "pass"
+    },
+    {
+      "name": "768: agendamento inválido e válido",
+      "status": "pass"
+    },
+    {
+      "name": "768: produtos, filtros, sacola e limites",
+      "status": "pass"
+    },
+    {
+      "name": "768: Luna e formulário de interesse",
+      "status": "pass"
+    },
+    {
+      "name": "768: clube, quatro artigos, mapa e contato",
+      "status": "pass"
+    },
+    {
+      "name": "768: teclado, modal e restauração de foco",
+      "status": "pass"
+    },
+    {
+      "name": "768: auditoria axe da página e formulários",
+      "status": "pass",
+      "details": {
+        "violations": 0
+      }
+    },
+    {
+      "name": "768: console, rede e ausência de envio real",
+      "status": "pass",
+      "details": {
+        "consoleErrors": 0,
+        "failedRequests": 0,
+        "submissions": 0
+      }
+    },
+    {
+      "name": "1024: página, fontes, assets e overflow",
+      "status": "pass",
+      "details": {
+        "fonts": "Nunito local",
+        "images": 24,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "name": "1024: navegação e menu",
+      "status": "pass"
+    },
+    {
+      "name": "1024: agendamento inválido e válido",
+      "status": "pass"
+    },
+    {
+      "name": "1024: produtos, filtros, sacola e limites",
+      "status": "pass"
+    },
+    {
+      "name": "1024: Luna e formulário de interesse",
+      "status": "pass"
+    },
+    {
+      "name": "1024: clube, quatro artigos, mapa e contato",
+      "status": "pass"
+    },
+    {
+      "name": "1024: teclado, modal e restauração de foco",
+      "status": "pass"
+    },
+    {
+      "name": "1024: auditoria axe da página e formulários",
+      "status": "pass",
+      "details": {
+        "violations": 0
+      }
+    },
+    {
+      "name": "1024: console, rede e ausência de envio real",
+      "status": "pass",
+      "details": {
+        "consoleErrors": 0,
+        "failedRequests": 0,
+        "submissions": 0
+      }
+    },
+    {
+      "name": "1440: página, fontes, assets e overflow",
+      "status": "pass",
+      "details": {
+        "fonts": "Nunito local",
+        "images": 24,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "name": "1440: navegação e menu",
+      "status": "pass"
+    },
+    {
+      "name": "1440: agendamento inválido e válido",
+      "status": "pass"
+    },
+    {
+      "name": "1440: produtos, filtros, sacola e limites",
+      "status": "pass"
+    },
+    {
+      "name": "1440: Luna e formulário de interesse",
+      "status": "pass"
+    },
+    {
+      "name": "1440: clube, quatro artigos, mapa e contato",
+      "status": "pass"
+    },
+    {
+      "name": "1440: teclado, modal e restauração de foco",
+      "status": "pass"
+    },
+    {
+      "name": "1440: auditoria axe da página e formulários",
+      "status": "pass",
+      "details": {
+        "violations": 0
+      }
+    },
+    {
+      "name": "1440: console, rede e ausência de envio real",
+      "status": "pass",
+      "details": {
+        "consoleErrors": 0,
+        "failedRequests": 0,
+        "submissions": 0
+      }
+    },
+    {
+      "name": "390: gesto de toque no comparador e rolagem vertical",
+      "status": "pass",
+      "details": {
+        "engine": "Chromium",
+        "input": "CDP synthesized touch",
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "320 e viewport equivalente a zoom: sem overflow",
+      "status": "pass"
+    }
+  ],
+  "failures": []
+}

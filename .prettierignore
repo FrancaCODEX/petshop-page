@@ -1,0 +1,8 @@
+originals/
+dist/
+node_modules/
+.taste-skill/
+public/assets/
+screenshots/
+docs/*audit.json
+docs/axe-*.json
